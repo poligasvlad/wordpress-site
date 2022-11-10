@@ -1,0 +1,53 @@
+.main-content{
+    position: relative;
+    padding: 48px 0px 110px 0px;
+    &__title{
+        @include font(normal, 800, $font-40, 48px);
+        color: $dark-text-color;
+        margin-bottom: 16px;
+    }
+    &__subtitle{
+        @include font(normal, 600, $font-20, 24px);
+        color: $dark-text-color;
+        letter-spacing: -0.6px;
+        margin-bottom: 32px;
+    }
+    .services{
+        &__item{
+            display: flex;
+            align-items: center;
+            @include font(normal, 500, $font-16, 19px);
+            color: #5F719F;
+            letter-spacing: -0.02em;
+            margin-bottom: 21px;
+            &--icon{
+                margin-right: 9px;
+            }
+        }
+        &__item:last-child{
+            margin-bottom: 40px;
+        }
+    }
+    .request-call{
+        display: flex;
+        align-items: center;
+        background: #485982;
+        @include font(normal, 800, $font-16, 26px);
+        letter-spacing: -0.5px;
+        text-transform: uppercase;
+        color: $light-text-color;
+        border-radius: 12px;
+        padding: 9px 22px;
+        svg{
+            margin-right: 9px;
+        }
+    }
+    &__image{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 42%;
+        max-width: 610px;
+        height: auto;
+    }
+}

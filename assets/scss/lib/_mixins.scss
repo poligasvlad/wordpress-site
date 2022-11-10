@@ -1,0 +1,40 @@
+// Add any custom mixins here
+
+/**
+ * Remove top margin from first child and bottom margin from last child.
+ */
+@mixin first_last_marginless() {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin first_last_marginless_hor() {
+  > :first-child {
+    margin-left: 0;
+  }
+
+  > :last-child {
+    margin-right: 0;
+  }
+}
+
+@mixin center-alignment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin font($style, $weight, $size, $line-height) {
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  font-family: $family;
+  line-height: $line-height;
+}
+
+

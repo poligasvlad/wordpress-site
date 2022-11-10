@@ -1,0 +1,61 @@
+.header{
+    background-color: $main-color;
+    height: 130px;
+    padding: 18px 0px 24px 0px;
+    .header-wrapper{
+        display: grid;
+        grid-template-columns: 34.3% 45.4% auto;
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 5px;
+        .logo{
+            align-self: center;
+        }
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: $grey-color;
+            border-radius: 10px;
+            width: 282px;
+            height: 39px;
+            .search{
+                &__field{
+                    height: 100%;
+                    width: 86%;
+                    border-radius: 10px;
+                    outline: none;
+                    background-color: inherit;
+                    padding: 8px 16px 8px 16px;
+                }
+                &__btn{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 14%;
+                    outline: none;
+                }
+            } 
+        }
+        .nav{
+            @include font(normal, 600, $font-17, 21px);
+            letter-spacing: 0.01em;
+
+            display: flex;
+            list-style-type: none;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            &__item{
+                margin-right: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+            }
+            &__item:last-child{
+                margin-right: 0px;
+            }
+            &__link{
+                color: $light-text-color;
+            }
+        }
+    }
+}

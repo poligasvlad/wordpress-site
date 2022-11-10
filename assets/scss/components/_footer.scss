@@ -1,0 +1,61 @@
+.footer{
+    background-color: $main-color;
+    padding: 56px 0px 16px 0px;
+    &__logo{
+        margin-bottom: 64px;
+    }
+    &__number{
+        margin-bottom: 40px;
+    }
+    .footer-wrapper{
+        display: grid;
+        grid-template-columns: 34.2% 22% 25% auto;
+        grid-template-rows: repeat(3, auto);
+        row-gap: 46px;
+
+        .address{
+            @include font(normal, 500, $font-16, 19px);
+            letter-spacing: -0.02em;
+            color: $light-text-color;
+            margin-bottom: 32px;
+        }
+        .email{
+            @include font(normal, 500, $font-16, 19px);
+            letter-spacing: -0.02em;
+            color: $light-text-color;
+        }
+        .list-of-useful{
+            &__title{
+                @include font(normal, 800, $font-18, 24px);
+                color: $light-text-color;
+                margin-bottom: 16px;
+            }
+            &__item{
+                margin-bottom: 10px;
+                a{
+                    @include font(normal, 400, $font-14, 17px);
+                    color: $light-text-color;
+                }
+            }
+            &__item:last-child{
+                margin-bottom: 0px;
+            }
+        }
+        .social-networks{
+            grid-column-start: 4;
+            display: flex;
+            &__item{
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                margin-right: 20px;
+            }
+        }
+        .copyright{
+            @include font(normal, 400, $font-14, 17px);
+            color: $light-text-color;
+            padding-top: 29px;
+        }
+    }
+
+}
